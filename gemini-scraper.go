@@ -14,7 +14,7 @@ func main() {
 
 	var geminiData []string
 
-	c.OnHTML(".search-result", func(e *colly.HTMLElement) {
+	c.OnHTML("message-content", func(e *colly.HTMLElement) {
 		result := e.Text
 		geminiData = append(geminiData, result)
 	})
@@ -23,7 +23,7 @@ func main() {
 		log.Println("Request URL:", r.Request.URL, "failed with response:", r, "\nError:", err)
 	})
 
-	err := c.Visit("https://gemini.google.com/app/dfade3e9a505ddfd") // replace
+	err := c.Visit("https://gemini.google.com/app/e676dd297aac3034")
 	if err != nil {
 		log.Fatal(err)
 	}
