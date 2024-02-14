@@ -23,7 +23,7 @@ func main() {
 		log.Println("Request URL:", r.Request.URL, "failed with response:", r, "\nError:", err)
 	})
 
-	err := c.Visit("https://gemini.google.com/app/e676dd297aac3034")
+	err := c.Visit("https://gemini.google.com/app/e676dd297aac3034") //not working
 	if err != nil {
 		log.Fatal(err)
 	}
